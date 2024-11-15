@@ -1,0 +1,91 @@
+---
+
+---
+
+<div class="container max-w-screen-xl flex w-full justify-between items-centermx-auto mx-auto px-4">
+    <nav
+      class="w-full justify-between lg:flex items-center"
+      id="navbar">
+      <div class="flex items-center mb-10 lg:mb-0">
+        <img
+          src="assets/image/navbar-logo.png"
+          alt="Logo"
+        />
+
+        <button
+          type="button"
+          id="navbarToggler"
+          class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center border border-blue-500 text-blue-500 rounded-md
+        hover:bg-blue-500 hover:text-white transition ease-in-out duration-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-menu"
+            ><path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+            ></path><path d="M4 8l16 0"></path><path d="M4 16l16 0"></path></svg
+          >
+        </button>
+      </div>
+
+      <ul id="navMenu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-14">
+        <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+          <a href="#">Home</a>
+        </li>
+
+        <li class="font-semibold text-gray-900 hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+          <a href="#">Sobre Me</a>
+        </li>
+      </ul>
+
+      <div id="navAction" class="hidden lg:flex flex-col md:flex-row  md:text-center mt-3  md:mt-0  md:space-x-6">
+        <a
+          href="#"
+          class="px-6 py-4 bg-blue-500 text-white font-semibold text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500 mb-5 md:mb-0"
+          >Join</a
+        >
+
+        <a
+          href="#"
+          class="text-nowrap px-6 py-4 border-2 border-blue-500 text-blue-500 font-semibold text-lg rounded-xl hover:bg-blue-700 hover:text-white transition ease-linear duration-500"
+          >Become a member</a
+        >
+      </div>
+    </nav>
+    </div>
+
+    <script>
+        const navbarToggler = document.getElementById("navbarToggler")!;
+        const navMenu = document.getElementById("navMenu")!;
+        const navAction = document.getElementById("navAction")!;
+    
+        navbarToggler.addEventListener("click", () => {
+         
+            if (navMenu.classList.contains("hidden")) {
+                navMenu.classList.remove("hidden");
+                navMenu.classList.add("flex");
+            }else {
+                navMenu.classList.add("hidden");
+                navMenu.classList.remove("flex");
+            }
+    
+            if (navAction.classList.contains("hidden")) {
+                navAction.classList.remove("hidden");
+                navAction.classList.add("flex");
+            }else {
+                navAction.classList.remove("flex");
+                navAction.classList.add("hidden");
+            }
+        });
+    
+    
+      </script>
